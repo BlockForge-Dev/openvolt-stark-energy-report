@@ -1,0 +1,45 @@
+{
+  "building": "Stark Industries UK HQ",
+  "meterId": "6514167223e3d1424bf82742",
+  "period": {
+    "from": "2023-01-01T00:00:00.000Z",
+    "to": "2023-02-01T00:00:00.000Z",
+    "timezone": "UTC",
+    "intervalSemantics": "[from, to)"
+  },
+  "totals": {
+    "energyKwh": 66048,
+    "co2Kg": 11517.725,
+    "averageCarbonIntensityGco2PerKwh": 174.38
+  },
+  "fuelMixPercent": {
+    "gas": 50.93,
+    "nuclear": 17,
+    "other": 4,
+    "solar": 2.86,
+    "wind": 25.21
+  },
+  "dataQuality": {
+    "expectedHalfHourlyIntervals": 1488,
+    "alignedIntervals": 1488,
+    "meterIntervals": 1488,
+    "carbonIntensityIntervals": 1488,
+    "generationMixIntervals": 1488,
+    "missingMeterIntervalStarts": [],
+    "duplicateMeterIntervalStarts": [],
+    "missingCarbonIntensityStarts": [],
+    "missingGenerationMixStarts": [],
+    "notes": [
+      "Meter timestamp mode detected as 'start'.",
+      "No out-of-range meter intervals detected."
+    ]
+  },
+  "assumptions": [
+    "The report period is January 2023 represented as [2023-01-01T00:00:00.000Z, 2023-02-01T00:00:00.000Z).",
+    "No building postcode/region was provided, so national GB carbon intensity and national generation mix are used.",
+    "CO2 is calculated per half-hour interval as kWh * gCO2/kWh / 1000.",
+    "Fuel mix is not a simple average; it is weighted by the building consumption in each half-hour interval.",
+    "If actual carbon intensity is missing, the client falls back to forecast and exposes that via carbonIntensitySource."
+  ],
+  "generatedAt": "2026-06-23T16:02:26.250Z"
+}
