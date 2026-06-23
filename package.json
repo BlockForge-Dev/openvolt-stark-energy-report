@@ -1,0 +1,30 @@
+{
+  "name": "openvolt-stark-energy-report",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Founding engineer take-home: January 2023 energy, CO2, and weighted fuel mix report for Stark Industries UK HQ using Openvolt + Carbon Intensity data.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "report": "tsx src/index.ts",
+    "report:mock": "cross-env MOCK_MODE=true tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "dashboard:install": "npm install --prefix dashboard",
+    "dashboard:dev": "npm run dev --prefix dashboard",
+    "dashboard:build": "npm run build --prefix dashboard"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
